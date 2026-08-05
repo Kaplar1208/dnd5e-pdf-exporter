@@ -1,0 +1,1472 @@
+{
+  "Name": {
+    "source": "meta.name"
+  },
+  "Background": {
+    "source": "meta.background"
+  },
+  "Class": {
+    "source": "meta.classSummary"
+  },
+  "Species": {
+    "source": "meta.race"
+  },
+  "Subclass": {
+    "source": "meta.subclassSummary"
+  },
+  "Level": {
+    "source": "meta.level"
+  },
+  "XP Points": {
+    "source": "meta.xp"
+  },
+  "Armor Class": {
+    "source": "combat.ac"
+  },
+  "Current HP": {
+    "source": "combat.hpCurrent"
+  },
+  "Temp HP": {
+    "source": "combat.hpTemp"
+  },
+  "Max HP": {
+    "source": "combat.hpMax"
+  },
+  "Spent HD": {
+    "source": "combat.hitDiceSpent"
+  },
+  "Max HD": {
+    "source": "combat.hitDiceMax"
+  },
+  "init": {
+    "source": "combat.initiative",
+    "transform": "mod"
+  },
+  "SPEED": {
+    "source": "combat.speed"
+  },
+  "SIZE": {
+    "source": "combat.sizeLabel"
+  },
+  "PASSIVE PERCEPTION": {
+    "source": "skills[key=prc].passive"
+  },
+  "PROF BONUS": {
+    "source": "combat.proficiencyBonus",
+    "transform": "mod"
+  },
+  "shield chk": {
+    "source": "combat.shieldEquipped",
+    "type": "checkbox"
+  },
+  "SUCCESS LEFT L chk": {
+    "source": "deathSaves.successes",
+    "type": "checkbox",
+    "threshold": 1
+  },
+  "SUCCESS CTR chk": {
+    "source": "deathSaves.successes",
+    "type": "checkbox",
+    "threshold": 2
+  },
+  "SUCCESS RIGHT chk": {
+    "source": "deathSaves.successes",
+    "type": "checkbox",
+    "threshold": 3
+  },
+  "FAILURE LEFT chk": {
+    "source": "deathSaves.failures",
+    "type": "checkbox",
+    "threshold": 1
+  },
+  "FAILURE CTR chk": {
+    "source": "deathSaves.failures",
+    "type": "checkbox",
+    "threshold": 2
+  },
+  "FAILURE RIGHT chk": {
+    "source": "deathSaves.failures",
+    "type": "checkbox",
+    "threshold": 3
+  },
+  "Check Box1": {
+    "source": "heroicInspiration",
+    "type": "checkbox"
+  },
+  "STR SCORE": {
+    "source": "abilities[key=str].score"
+  },
+  "STR MOD": {
+    "source": "abilities[key=str].mod",
+    "transform": "mod"
+  },
+  "DEX SCORE": {
+    "source": "abilities[key=dex].score"
+  },
+  "DEX MOD": {
+    "source": "abilities[key=dex].mod",
+    "transform": "mod"
+  },
+  "CON SCORE": {
+    "source": "abilities[key=con].score"
+  },
+  "CON MOD": {
+    "source": "abilities[key=con].mod",
+    "transform": "mod"
+  },
+  "INT SCORE": {
+    "source": "abilities[key=int].score"
+  },
+  "INT MOD": {
+    "source": "abilities[key=int].mod",
+    "transform": "mod"
+  },
+  "WIS SCORE": {
+    "source": "abilities[key=wis].score"
+  },
+  "WIS MOD": {
+    "source": "abilities[key=wis].mod",
+    "transform": "mod"
+  },
+  "CHA SCORE": {
+    "source": "abilities[key=cha].score"
+  },
+  "CHA MOD": {
+    "source": "abilities[key=cha].mod",
+    "transform": "mod"
+  },
+  "STR SAVE": {
+    "source": "abilities[key=str].saveMod",
+    "transform": "mod"
+  },
+  "Check Box18": {
+    "source": "abilities[key=str].saveProficient",
+    "type": "checkbox"
+  },
+  "DEX SAVE": {
+    "source": "abilities[key=dex].saveMod",
+    "transform": "mod"
+  },
+  "Check Box11": {
+    "source": "abilities[key=dex].saveProficient",
+    "type": "checkbox"
+  },
+  "CON SAVE": {
+    "source": "abilities[key=con].saveMod",
+    "transform": "mod"
+  },
+  "Check Box7": {
+    "source": "abilities[key=con].saveProficient",
+    "type": "checkbox"
+  },
+  "INT SAVE": {
+    "source": "abilities[key=int].saveMod",
+    "transform": "mod"
+  },
+  "Check Box25": {
+    "source": "abilities[key=int].saveProficient",
+    "type": "checkbox"
+  },
+  "Text Field71": {
+    "source": "abilities[key=wis].saveMod",
+    "transform": "mod"
+  },
+  "Check Box17": {
+    "source": "abilities[key=wis].saveProficient",
+    "type": "checkbox"
+  },
+  "CHA SAVE": {
+    "source": "abilities[key=cha].saveMod",
+    "transform": "mod"
+  },
+  "Check Box6": {
+    "source": "abilities[key=cha].saveProficient",
+    "type": "checkbox"
+  },
+  "ACROBATICS": {
+    "source": "skills[key=acr].mod",
+    "transform": "mod"
+  },
+  "Check Box8": {
+    "source": "skills[key=acr].proficient",
+    "type": "checkbox"
+  },
+  "SLEIGHT OF HAND": {
+    "source": "skills[key=slt].mod",
+    "transform": "mod"
+  },
+  "Check Box9": {
+    "source": "skills[key=slt].proficient",
+    "type": "checkbox"
+  },
+  "STEALTH": {
+    "source": "skills[key=ste].mod",
+    "transform": "mod"
+  },
+  "Check Box10": {
+    "source": "skills[key=ste].proficient",
+    "type": "checkbox"
+  },
+  "ANIMAL HANDLING": {
+    "source": "skills[key=ani].mod",
+    "transform": "mod"
+  },
+  "Check Box15": {
+    "source": "skills[key=ani].proficient",
+    "type": "checkbox"
+  },
+  "INSIGHT": {
+    "source": "skills[key=ins].mod",
+    "transform": "mod"
+  },
+  "Check Box13": {
+    "source": "skills[key=ins].proficient",
+    "type": "checkbox"
+  },
+  "MEDICINE": {
+    "source": "skills[key=med].mod",
+    "transform": "mod"
+  },
+  "Check Box12": {
+    "source": "skills[key=med].proficient",
+    "type": "checkbox"
+  },
+  "PERCEPTION": {
+    "source": "skills[key=prc].mod",
+    "transform": "mod"
+  },
+  "Check Box14": {
+    "source": "skills[key=prc].proficient",
+    "type": "checkbox"
+  },
+  "SURVIVAL": {
+    "source": "skills[key=sur].mod",
+    "transform": "mod"
+  },
+  "Check Box16": {
+    "source": "skills[key=sur].proficient",
+    "type": "checkbox"
+  },
+  "ARCANA": {
+    "source": "skills[key=arc].mod",
+    "transform": "mod"
+  },
+  "Check Box24": {
+    "source": "skills[key=arc].proficient",
+    "type": "checkbox"
+  },
+  "HISTORY": {
+    "source": "skills[key=his].mod",
+    "transform": "mod"
+  },
+  "Check Box20": {
+    "source": "skills[key=his].proficient",
+    "type": "checkbox"
+  },
+  "INVESTIGATION": {
+    "source": "skills[key=inv].mod",
+    "transform": "mod"
+  },
+  "Check Box21": {
+    "source": "skills[key=inv].proficient",
+    "type": "checkbox"
+  },
+  "NATURE": {
+    "source": "skills[key=nat].mod",
+    "transform": "mod"
+  },
+  "Check Box22": {
+    "source": "skills[key=nat].proficient",
+    "type": "checkbox"
+  },
+  "RELIGION": {
+    "source": "skills[key=rel].mod",
+    "transform": "mod"
+  },
+  "Check Box23": {
+    "source": "skills[key=rel].proficient",
+    "type": "checkbox"
+  },
+  "ATHLETICS": {
+    "source": "skills[key=ath].mod",
+    "transform": "mod"
+  },
+  "Check Box19": {
+    "source": "skills[key=ath].proficient",
+    "type": "checkbox"
+  },
+  "DECEPTION": {
+    "source": "skills[key=dec].mod",
+    "transform": "mod"
+  },
+  "Check Box5": {
+    "source": "skills[key=dec].proficient",
+    "type": "checkbox"
+  },
+  "INTIMIDATE": {
+    "source": "skills[key=itm].mod",
+    "transform": "mod"
+  },
+  "Check Box4": {
+    "source": "skills[key=itm].proficient",
+    "type": "checkbox"
+  },
+  "PERFORMANCE": {
+    "source": "skills[key=prf].mod",
+    "transform": "mod"
+  },
+  "Check Box3": {
+    "source": "skills[key=prf].proficient",
+    "type": "checkbox"
+  },
+  "PERSUASION": {
+    "source": "skills[key=per].mod",
+    "transform": "mod"
+  },
+  "Check Box2": {
+    "source": "skills[key=per].proficient",
+    "type": "checkbox"
+  },
+  "NAME - WEAPON 1": {
+    "source": "weapons.0.name"
+  },
+  "BONUS/DC - WEAPON 1": {
+    "source": "weapons.0.atkBonus"
+  },
+  "DAMAGE/TYPE - WEAPON 1": {
+    "source": "weapons.0.damage"
+  },
+  "NOTES - WEAPON 1": {
+    "source": "weapons.0.notes"
+  },
+  "NAME - WEAPON 2": {
+    "source": "weapons.1.name"
+  },
+  "BONUS/DC - WEAPON 2": {
+    "source": "weapons.1.atkBonus"
+  },
+  "DAMAGE/TYPE - WEAPON 2": {
+    "source": "weapons.1.damage"
+  },
+  "NOTES - WEAPON 2": {
+    "source": "weapons.1.notes"
+  },
+  "NAME - WEAPON 3": {
+    "source": "weapons.2.name"
+  },
+  "BONUS/DC - WEAPON 3": {
+    "source": "weapons.2.atkBonus"
+  },
+  "DAMAGE/TYPE - WEAPON 3": {
+    "source": "weapons.2.damage"
+  },
+  "NOTES - WEAPON 3": {
+    "source": "weapons.2.notes"
+  },
+  "NAME - WEAPON 4": {
+    "source": "weapons.3.name"
+  },
+  "BONUS/DC - WEAPON 4": {
+    "source": "weapons.3.atkBonus"
+  },
+  "DAMAGE/TYPE - WEAPON 4": {
+    "source": "weapons.3.damage"
+  },
+  "NOTES - WEAPON 4": {
+    "source": "weapons.3.notes"
+  },
+  "NAME - WEAPON 5": {
+    "source": "weapons.4.name"
+  },
+  "BONUS/DC - WEAPON 5": {
+    "source": "weapons.4.atkBonus"
+  },
+  "DAMAGE/TYPE - WEAPON 5": {
+    "source": "weapons.4.damage"
+  },
+  "NOTES - WEAPON 5": {
+    "source": "weapons.4.notes"
+  },
+  "NAME - WEAPON 6": {
+    "source": "weapons.5.name"
+  },
+  "BONUS/DC - WEAPON 6": {
+    "source": "weapons.5.atkBonus"
+  },
+  "DAMAGE/TYPE - WEAPON 6": {
+    "source": "weapons.5.damage"
+  },
+  "NOTES - WEAPON 6": {
+    "source": "weapons.5.notes"
+  },
+  "CLASS FEATURES 1": {
+    "source": "classFeaturesPart1",
+    "transform": "lines",
+    "autoSize": true
+  },
+  "SPECIES TRAITS": {
+    "source": "speciesTraitsLines",
+    "transform": "lines",
+    "autoSize": true
+  },
+  "FEATS": {
+    "source": "feats",
+    "transform": "lines",
+    "autoSize": true
+  },
+  "WEAPON PROF": {
+    "source": "weaponProf",
+    "transform": "lines",
+    "autoSize": true
+  },
+  "TOOL PROF": {
+    "source": "toolProf",
+    "transform": "lines",
+    "autoSize": true
+  },
+  "LANGUAGES": {
+    "source": "languages",
+    "transform": "lines",
+    "autoSize": true
+  },
+  "EQUIPMENT": {
+    "source": "equipmentLines",
+    "transform": "lines",
+    "autoSize": true
+  },
+  "PERSONALITY": {
+    "source": "bio.combinedText",
+    "autoSize": true
+  },
+  "ATTUNMENT 1": {
+    "source": "attunedItems.0"
+  },
+  "ATTUNMENT 2": {
+    "source": "attunedItems.1"
+  },
+  "ATTUNMENT 3": {
+    "source": "attunedItems.2"
+  },
+  "CP": {
+    "source": "currency.cp"
+  },
+  "SP": {
+    "source": "currency.sp"
+  },
+  "EP": {
+    "source": "currency.ep"
+  },
+  "GP": {
+    "source": "currency.gp"
+  },
+  "PP": {
+    "source": "currency.pp"
+  },
+  "SPELLCASTING ABILITY": {
+    "source": "spellcasting.abilityLabelWithPactNote",
+    "autoSize": true
+  },
+  "SPELLCASTING MOD": {
+    "source": "spellcasting.mod",
+    "transform": "mod"
+  },
+  "SPELL SAVE DC": {
+    "source": "spellcasting.saveDC"
+  },
+  "SPELL ATTACK BONUS": {
+    "source": "spellcasting.attackBonus",
+    "transform": "mod"
+  },
+  "LVL1 TOTAL": {
+    "source": "spellSlots.1.max"
+  },
+  "LVL2 TOTAL": {
+    "source": "spellSlots.2.max"
+  },
+  "LVL3 TOTAL": {
+    "source": "spellSlots.3.max"
+  },
+  "LVL4 TOTAL": {
+    "source": "spellSlots.4.max"
+  },
+  "LVL5 TOTAL": {
+    "source": "spellSlots.5.max"
+  },
+  "LVL6 TOTAL": {
+    "source": "spellSlots.6.max"
+  },
+  "LVL7 TOTAL": {
+    "source": "spellSlots.7.max"
+  },
+  "LVL8 TOTAL": {
+    "source": "spellSlots.8.max"
+  },
+  "LVL9 TOTAL": {
+    "source": "spellSlots.9.max"
+  },
+  "SPELL LEVEL": {
+    "source": "spells.0.level"
+  },
+  "SPELL NAME": {
+    "source": "spells.0.name"
+  },
+  "CASTING TIME": {
+    "source": "spells.0.castingTime"
+  },
+  "RANGE": {
+    "source": "spells.0.range"
+  },
+  "SPELL NOTES": {
+    "source": "spells.0.notes"
+  },
+  "Check Box0": {
+    "source": "spells.0.concentration",
+    "type": "checkbox"
+  },
+  "Check Box59": {
+    "source": "spells.0.ritual",
+    "type": "checkbox"
+  },
+  "Check Box60": {
+    "source": "spells.0.material",
+    "type": "checkbox"
+  },
+  "SPELL LEVEL0": {
+    "source": "spells.1.level"
+  },
+  "SPELL NAME0": {
+    "source": "spells.1.name"
+  },
+  "CASTING TIME0": {
+    "source": "spells.1.castingTime"
+  },
+  "RANGE0": {
+    "source": "spells.1.range"
+  },
+  "SPELL NOTES0": {
+    "source": "spells.1.notes"
+  },
+  "Check Box64": {
+    "source": "spells.1.concentration",
+    "type": "checkbox"
+  },
+  "Check Box65": {
+    "source": "spells.1.ritual",
+    "type": "checkbox"
+  },
+  "Check Box66": {
+    "source": "spells.1.material",
+    "type": "checkbox"
+  },
+  "SPELL LEVEL1": {
+    "source": "spells.2.level"
+  },
+  "SPELL NAME1": {
+    "source": "spells.2.name"
+  },
+  "CASTING TIME1": {
+    "source": "spells.2.castingTime"
+  },
+  "RANGE1": {
+    "source": "spells.2.range"
+  },
+  "SPELL NOTES1": {
+    "source": "spells.2.notes"
+  },
+  "Check Box67": {
+    "source": "spells.2.concentration",
+    "type": "checkbox"
+  },
+  "Check Box68": {
+    "source": "spells.2.ritual",
+    "type": "checkbox"
+  },
+  "Check Box69": {
+    "source": "spells.2.material",
+    "type": "checkbox"
+  },
+  "SPELL LEVEL4": {
+    "source": "spells.3.level"
+  },
+  "SPELL NAME4": {
+    "source": "spells.3.name"
+  },
+  "CASTING TIME4": {
+    "source": "spells.3.castingTime"
+  },
+  "RANGE4": {
+    "source": "spells.3.range"
+  },
+  "SPELL NOTES2": {
+    "source": "spells.3.notes"
+  },
+  "Check Box70": {
+    "source": "spells.3.concentration",
+    "type": "checkbox"
+  },
+  "Check Box71": {
+    "source": "spells.3.ritual",
+    "type": "checkbox"
+  },
+  "Check Box72": {
+    "source": "spells.3.material",
+    "type": "checkbox"
+  },
+  "SPELL LEVEL3": {
+    "source": "spells.4.level"
+  },
+  "SPELL NAME3": {
+    "source": "spells.4.name"
+  },
+  "CASTING TIME3": {
+    "source": "spells.4.castingTime"
+  },
+  "RANGE3": {
+    "source": "spells.4.range"
+  },
+  "SPELL NOTES3": {
+    "source": "spells.4.notes"
+  },
+  "Check Box73": {
+    "source": "spells.4.concentration",
+    "type": "checkbox"
+  },
+  "Check Box74": {
+    "source": "spells.4.ritual",
+    "type": "checkbox"
+  },
+  "Check Box75": {
+    "source": "spells.4.material",
+    "type": "checkbox"
+  },
+  "SPELL LEVEL2": {
+    "source": "spells.5.level"
+  },
+  "SPELL NAME2": {
+    "source": "spells.5.name"
+  },
+  "CASTING TIME2": {
+    "source": "spells.5.castingTime"
+  },
+  "RANGE2": {
+    "source": "spells.5.range"
+  },
+  "SPELL NOTES4": {
+    "source": "spells.5.notes"
+  },
+  "Check Box76": {
+    "source": "spells.5.concentration",
+    "type": "checkbox"
+  },
+  "Check Box77": {
+    "source": "spells.5.ritual",
+    "type": "checkbox"
+  },
+  "Check Box78": {
+    "source": "spells.5.material",
+    "type": "checkbox"
+  },
+  "SPELL LEVEL7": {
+    "source": "spells.6.level"
+  },
+  "SPELL NAME7": {
+    "source": "spells.6.name"
+  },
+  "CASTING TIME7": {
+    "source": "spells.6.castingTime"
+  },
+  "RANGE7": {
+    "source": "spells.6.range"
+  },
+  "SPELL NOTES5": {
+    "source": "spells.6.notes"
+  },
+  "Check Box79": {
+    "source": "spells.6.concentration",
+    "type": "checkbox"
+  },
+  "Check Box80": {
+    "source": "spells.6.ritual",
+    "type": "checkbox"
+  },
+  "Check Box81": {
+    "source": "spells.6.material",
+    "type": "checkbox"
+  },
+  "SPELL LEVEL6": {
+    "source": "spells.7.level"
+  },
+  "SPELL NAME6": {
+    "source": "spells.7.name"
+  },
+  "CASTING TIME6": {
+    "source": "spells.7.castingTime"
+  },
+  "RANGE6": {
+    "source": "spells.7.range"
+  },
+  "SPELL NOTES6": {
+    "source": "spells.7.notes"
+  },
+  "Check Box85": {
+    "source": "spells.7.concentration",
+    "type": "checkbox"
+  },
+  "Check Box86": {
+    "source": "spells.7.ritual",
+    "type": "checkbox"
+  },
+  "Check Box87": {
+    "source": "spells.7.material",
+    "type": "checkbox"
+  },
+  "SPELL LEVEL5": {
+    "source": "spells.8.level"
+  },
+  "SPELL NAME5": {
+    "source": "spells.8.name"
+  },
+  "CASTING TIME5": {
+    "source": "spells.8.castingTime"
+  },
+  "RANGE5": {
+    "source": "spells.8.range"
+  },
+  "SPELL NOTES7": {
+    "source": "spells.8.notes"
+  },
+  "Check Box82": {
+    "source": "spells.8.concentration",
+    "type": "checkbox"
+  },
+  "Check Box83": {
+    "source": "spells.8.ritual",
+    "type": "checkbox"
+  },
+  "Check Box84": {
+    "source": "spells.8.material",
+    "type": "checkbox"
+  },
+  "SPELL LEVEL10": {
+    "source": "spells.9.level"
+  },
+  "SPELL NAME10": {
+    "source": "spells.9.name"
+  },
+  "CASTING TIME10": {
+    "source": "spells.9.castingTime"
+  },
+  "RANGE10": {
+    "source": "spells.9.range"
+  },
+  "SPELL NOTES8": {
+    "source": "spells.9.notes"
+  },
+  "Check Box88": {
+    "source": "spells.9.concentration",
+    "type": "checkbox"
+  },
+  "Check Box89": {
+    "source": "spells.9.ritual",
+    "type": "checkbox"
+  },
+  "Check Box90": {
+    "source": "spells.9.material",
+    "type": "checkbox"
+  },
+  "SPELL LEVEL9": {
+    "source": "spells.10.level"
+  },
+  "SPELL NAME9": {
+    "source": "spells.10.name"
+  },
+  "CASTING TIME9": {
+    "source": "spells.10.castingTime"
+  },
+  "RANGE9": {
+    "source": "spells.10.range"
+  },
+  "SPELL NOTES9": {
+    "source": "spells.10.notes"
+  },
+  "Check Box91": {
+    "source": "spells.10.concentration",
+    "type": "checkbox"
+  },
+  "Check Box92": {
+    "source": "spells.10.ritual",
+    "type": "checkbox"
+  },
+  "Check Box93": {
+    "source": "spells.10.material",
+    "type": "checkbox"
+  },
+  "SPELL LEVEL8": {
+    "source": "spells.11.level"
+  },
+  "SPELL NAME8": {
+    "source": "spells.11.name"
+  },
+  "CASTING TIME8": {
+    "source": "spells.11.castingTime"
+  },
+  "RANGE8": {
+    "source": "spells.11.range"
+  },
+  "SPELL NOTES10": {
+    "source": "spells.11.notes"
+  },
+  "Check Box94": {
+    "source": "spells.11.concentration",
+    "type": "checkbox"
+  },
+  "Check Box95": {
+    "source": "spells.11.ritual",
+    "type": "checkbox"
+  },
+  "Check Box96": {
+    "source": "spells.11.material",
+    "type": "checkbox"
+  },
+  "SPELL LEVEL13": {
+    "source": "spells.12.level"
+  },
+  "SPELL NAME13": {
+    "source": "spells.12.name"
+  },
+  "CASTING TIME13": {
+    "source": "spells.12.castingTime"
+  },
+  "RANGE13": {
+    "source": "spells.12.range"
+  },
+  "SPELL NOTES11": {
+    "source": "spells.12.notes"
+  },
+  "Check Box97": {
+    "source": "spells.12.concentration",
+    "type": "checkbox"
+  },
+  "Check Box98": {
+    "source": "spells.12.ritual",
+    "type": "checkbox"
+  },
+  "Check Box99": {
+    "source": "spells.12.material",
+    "type": "checkbox"
+  },
+  "SPELL LEVEL12": {
+    "source": "spells.13.level"
+  },
+  "SPELL NAME12": {
+    "source": "spells.13.name"
+  },
+  "CASTING TIME12": {
+    "source": "spells.13.castingTime"
+  },
+  "RANGE12": {
+    "source": "spells.13.range"
+  },
+  "SPELL NOTES12": {
+    "source": "spells.13.notes"
+  },
+  "Check Box100": {
+    "source": "spells.13.concentration",
+    "type": "checkbox"
+  },
+  "Check Box101": {
+    "source": "spells.13.ritual",
+    "type": "checkbox"
+  },
+  "Check Box102": {
+    "source": "spells.13.material",
+    "type": "checkbox"
+  },
+  "SPELL LEVEL11": {
+    "source": "spells.14.level"
+  },
+  "SPELL NAME11": {
+    "source": "spells.14.name"
+  },
+  "CASTING TIME11": {
+    "source": "spells.14.castingTime"
+  },
+  "RANGE11": {
+    "source": "spells.14.range"
+  },
+  "SPELL NOTES13": {
+    "source": "spells.14.notes"
+  },
+  "Check Box103": {
+    "source": "spells.14.concentration",
+    "type": "checkbox"
+  },
+  "Check Box104": {
+    "source": "spells.14.ritual",
+    "type": "checkbox"
+  },
+  "Check Box105": {
+    "source": "spells.14.material",
+    "type": "checkbox"
+  },
+  "SPELL LEVEL16": {
+    "source": "spells.15.level"
+  },
+  "SPELL NAME16": {
+    "source": "spells.15.name"
+  },
+  "CASTING TIME16": {
+    "source": "spells.15.castingTime"
+  },
+  "RANGE16": {
+    "source": "spells.15.range"
+  },
+  "SPELL NOTES14": {
+    "source": "spells.15.notes"
+  },
+  "Check Box106": {
+    "source": "spells.15.concentration",
+    "type": "checkbox"
+  },
+  "Check Box107": {
+    "source": "spells.15.ritual",
+    "type": "checkbox"
+  },
+  "Check Box108": {
+    "source": "spells.15.material",
+    "type": "checkbox"
+  },
+  "SPELL LEVEL15": {
+    "source": "spells.16.level"
+  },
+  "SPELL NAME15": {
+    "source": "spells.16.name"
+  },
+  "CASTING TIME15": {
+    "source": "spells.16.castingTime"
+  },
+  "RANGE15": {
+    "source": "spells.16.range"
+  },
+  "SPELL NOTES15": {
+    "source": "spells.16.notes"
+  },
+  "Check Box109": {
+    "source": "spells.16.concentration",
+    "type": "checkbox"
+  },
+  "Check Box110": {
+    "source": "spells.16.ritual",
+    "type": "checkbox"
+  },
+  "Check Box111": {
+    "source": "spells.16.material",
+    "type": "checkbox"
+  },
+  "SPELL LEVEL14": {
+    "source": "spells.17.level"
+  },
+  "SPELL NAME14": {
+    "source": "spells.17.name"
+  },
+  "CASTING TIME14": {
+    "source": "spells.17.castingTime"
+  },
+  "RANGE14": {
+    "source": "spells.17.range"
+  },
+  "SPELL NOTES16": {
+    "source": "spells.17.notes"
+  },
+  "Check Box112": {
+    "source": "spells.17.concentration",
+    "type": "checkbox"
+  },
+  "Check Box113": {
+    "source": "spells.17.ritual",
+    "type": "checkbox"
+  },
+  "Check Box114": {
+    "source": "spells.17.material",
+    "type": "checkbox"
+  },
+  "SPELL LEVEL19": {
+    "source": "spells.18.level"
+  },
+  "SPELL NAME19": {
+    "source": "spells.18.name"
+  },
+  "CASTING TIME19": {
+    "source": "spells.18.castingTime"
+  },
+  "RANGE19": {
+    "source": "spells.18.range"
+  },
+  "SPELL NOTES17": {
+    "source": "spells.18.notes"
+  },
+  "Check Box115": {
+    "source": "spells.18.concentration",
+    "type": "checkbox"
+  },
+  "Check Box116": {
+    "source": "spells.18.ritual",
+    "type": "checkbox"
+  },
+  "Check Box117": {
+    "source": "spells.18.material",
+    "type": "checkbox"
+  },
+  "SPELL LEVEL18": {
+    "source": "spells.19.level"
+  },
+  "SPELL NAME18": {
+    "source": "spells.19.name"
+  },
+  "CASTING TIME18": {
+    "source": "spells.19.castingTime"
+  },
+  "RANGE18": {
+    "source": "spells.19.range"
+  },
+  "SPELL NOTES18": {
+    "source": "spells.19.notes"
+  },
+  "Check Box118": {
+    "source": "spells.19.concentration",
+    "type": "checkbox"
+  },
+  "Check Box119": {
+    "source": "spells.19.ritual",
+    "type": "checkbox"
+  },
+  "Check Box120": {
+    "source": "spells.19.material",
+    "type": "checkbox"
+  },
+  "SPELL LEVEL17": {
+    "source": "spells.20.level"
+  },
+  "SPELL NAME17": {
+    "source": "spells.20.name"
+  },
+  "CASTING TIME17": {
+    "source": "spells.20.castingTime"
+  },
+  "RANGE17": {
+    "source": "spells.20.range"
+  },
+  "SPELL NOTES19": {
+    "source": "spells.20.notes"
+  },
+  "Check Box121": {
+    "source": "spells.20.concentration",
+    "type": "checkbox"
+  },
+  "Check Box122": {
+    "source": "spells.20.ritual",
+    "type": "checkbox"
+  },
+  "Check Box123": {
+    "source": "spells.20.material",
+    "type": "checkbox"
+  },
+  "SPELL LEVEL22": {
+    "source": "spells.21.level"
+  },
+  "SPELL NAME22": {
+    "source": "spells.21.name"
+  },
+  "CASTING TIME22": {
+    "source": "spells.21.castingTime"
+  },
+  "RANGE22": {
+    "source": "spells.21.range"
+  },
+  "SPELL NOTES20": {
+    "source": "spells.21.notes"
+  },
+  "Check Box124": {
+    "source": "spells.21.concentration",
+    "type": "checkbox"
+  },
+  "Check Box125": {
+    "source": "spells.21.ritual",
+    "type": "checkbox"
+  },
+  "Check Box126": {
+    "source": "spells.21.material",
+    "type": "checkbox"
+  },
+  "SPELL LEVEL21": {
+    "source": "spells.22.level"
+  },
+  "SPELL NAME21": {
+    "source": "spells.22.name"
+  },
+  "CASTING TIME21": {
+    "source": "spells.22.castingTime"
+  },
+  "RANGE21": {
+    "source": "spells.22.range"
+  },
+  "SPELL NOTES21": {
+    "source": "spells.22.notes"
+  },
+  "Check Box127": {
+    "source": "spells.22.concentration",
+    "type": "checkbox"
+  },
+  "Check Box128": {
+    "source": "spells.22.ritual",
+    "type": "checkbox"
+  },
+  "Check Box129": {
+    "source": "spells.22.material",
+    "type": "checkbox"
+  },
+  "SPELL LEVEL20": {
+    "source": "spells.23.level"
+  },
+  "SPELL NAME20": {
+    "source": "spells.23.name"
+  },
+  "CASTING TIME20": {
+    "source": "spells.23.castingTime"
+  },
+  "RANGE20": {
+    "source": "spells.23.range"
+  },
+  "SPELL NOTES22": {
+    "source": "spells.23.notes"
+  },
+  "Check Box130": {
+    "source": "spells.23.concentration",
+    "type": "checkbox"
+  },
+  "Check Box131": {
+    "source": "spells.23.ritual",
+    "type": "checkbox"
+  },
+  "Check Box132": {
+    "source": "spells.23.material",
+    "type": "checkbox"
+  },
+  "SPELL LEVEL25": {
+    "source": "spells.24.level"
+  },
+  "SPELL NAME25": {
+    "source": "spells.24.name"
+  },
+  "CASTING TIME25": {
+    "source": "spells.24.castingTime"
+  },
+  "RANGE25": {
+    "source": "spells.24.range"
+  },
+  "SPELL NOTES23": {
+    "source": "spells.24.notes"
+  },
+  "Check Box133": {
+    "source": "spells.24.concentration",
+    "type": "checkbox"
+  },
+  "Check Box134": {
+    "source": "spells.24.ritual",
+    "type": "checkbox"
+  },
+  "Check Box135": {
+    "source": "spells.24.material",
+    "type": "checkbox"
+  },
+  "SPELL LEVEL24": {
+    "source": "spells.25.level"
+  },
+  "SPELL NAME24": {
+    "source": "spells.25.name"
+  },
+  "CASTING TIME24": {
+    "source": "spells.25.castingTime"
+  },
+  "RANGE24": {
+    "source": "spells.25.range"
+  },
+  "SPELL NOTES24": {
+    "source": "spells.25.notes"
+  },
+  "Check Box136": {
+    "source": "spells.25.concentration",
+    "type": "checkbox"
+  },
+  "Check Box137": {
+    "source": "spells.25.ritual",
+    "type": "checkbox"
+  },
+  "Check Box138": {
+    "source": "spells.25.material",
+    "type": "checkbox"
+  },
+  "SPELL LEVEL23": {
+    "source": "spells.26.level"
+  },
+  "SPELL NAME23": {
+    "source": "spells.26.name"
+  },
+  "CASTING TIME23": {
+    "source": "spells.26.castingTime"
+  },
+  "RANGE23": {
+    "source": "spells.26.range"
+  },
+  "SPELL NOTES25": {
+    "source": "spells.26.notes"
+  },
+  "Check Box139": {
+    "source": "spells.26.concentration",
+    "type": "checkbox"
+  },
+  "Check Box140": {
+    "source": "spells.26.ritual",
+    "type": "checkbox"
+  },
+  "Check Box141": {
+    "source": "spells.26.material",
+    "type": "checkbox"
+  },
+  "SPELL LEVEL28": {
+    "source": "spells.27.level"
+  },
+  "SPELL NAME28": {
+    "source": "spells.27.name"
+  },
+  "CASTING TIME28": {
+    "source": "spells.27.castingTime"
+  },
+  "RANGE28": {
+    "source": "spells.27.range"
+  },
+  "SPELL NOTES26": {
+    "source": "spells.27.notes"
+  },
+  "Check Box142": {
+    "source": "spells.27.concentration",
+    "type": "checkbox"
+  },
+  "Check Box143": {
+    "source": "spells.27.ritual",
+    "type": "checkbox"
+  },
+  "Check Box144": {
+    "source": "spells.27.material",
+    "type": "checkbox"
+  },
+  "SPELL LEVEL27": {
+    "source": "spells.28.level"
+  },
+  "SPELL NAME27": {
+    "source": "spells.28.name"
+  },
+  "CASTING TIME27": {
+    "source": "spells.28.castingTime"
+  },
+  "RANGE27": {
+    "source": "spells.28.range"
+  },
+  "SPELL NOTES27": {
+    "source": "spells.28.notes"
+  },
+  "Check Box145": {
+    "source": "spells.28.concentration",
+    "type": "checkbox"
+  },
+  "Check Box146": {
+    "source": "spells.28.ritual",
+    "type": "checkbox"
+  },
+  "Check Box147": {
+    "source": "spells.28.material",
+    "type": "checkbox"
+  },
+  "SPELL LEVEL26": {
+    "source": "spells.29.level"
+  },
+  "SPELL NAME26": {
+    "source": "spells.29.name"
+  },
+  "CASTING TIME26": {
+    "source": "spells.29.castingTime"
+  },
+  "RANGE26": {
+    "source": "spells.29.range"
+  },
+  "SPELL NOTES28": {
+    "source": "spells.29.notes"
+  },
+  "Check Box148": {
+    "source": "spells.29.concentration",
+    "type": "checkbox"
+  },
+  "Check Box26": {
+    "source": "spells.29.ritual",
+    "type": "checkbox"
+  },
+  "Check Box150": {
+    "source": "spells.29.material",
+    "type": "checkbox"
+  },
+  "Check Box33": {
+    "source": "armorProf.light",
+    "type": "checkbox"
+  },
+  "Check Box34": {
+    "source": "armorProf.medium",
+    "type": "checkbox"
+  },
+  "Check Box35": {
+    "source": "armorProf.heavy",
+    "type": "checkbox"
+  },
+  "Check Box36": {
+    "source": "armorProf.shield",
+    "type": "checkbox"
+  },
+  "Check Box63": {
+    "source": "attunedItems.0",
+    "transform": "bool",
+    "type": "checkbox"
+  },
+  "Check Box62": {
+    "source": "attunedItems.1",
+    "transform": "bool",
+    "type": "checkbox"
+  },
+  "Check Box61": {
+    "source": "attunedItems.2",
+    "transform": "bool",
+    "type": "checkbox"
+  },
+  "Check Box55": {
+    "source": "spellSlots.7.expended",
+    "type": "checkbox",
+    "threshold": 1
+  },
+  "Check Box56": {
+    "source": "spellSlots.7.expended",
+    "type": "checkbox",
+    "threshold": 2
+  },
+  "Check Box52": {
+    "source": "spellSlots.1.expended",
+    "type": "checkbox",
+    "threshold": 1
+  },
+  "Check Box46": {
+    "source": "spellSlots.1.expended",
+    "type": "checkbox",
+    "threshold": 2
+  },
+  "Check Box40": {
+    "source": "spellSlots.1.expended",
+    "type": "checkbox",
+    "threshold": 3
+  },
+  "Check Box37": {
+    "source": "spellSlots.1.expended",
+    "type": "checkbox",
+    "threshold": 4
+  },
+  "Check Box50": {
+    "source": "spellSlots.4.expended",
+    "type": "checkbox",
+    "threshold": 1
+  },
+  "Check Box53": {
+    "source": "spellSlots.4.expended",
+    "type": "checkbox",
+    "threshold": 2
+  },
+  "Check Box39": {
+    "source": "spellSlots.4.expended",
+    "type": "checkbox",
+    "threshold": 3
+  },
+  "Check Box48": {
+    "source": "spellSlots.5.expended",
+    "type": "checkbox",
+    "threshold": 1
+  },
+  "Check Box45": {
+    "source": "spellSlots.5.expended",
+    "type": "checkbox",
+    "threshold": 2
+  },
+  "Check Box42": {
+    "source": "spellSlots.5.expended",
+    "type": "checkbox",
+    "threshold": 3
+  },
+  "Check Box58": {
+    "source": "spellSlots.8.expended",
+    "type": "checkbox",
+    "threshold": 1
+  },
+  "Check Box49": {
+    "source": "spellSlots.2.expended",
+    "type": "checkbox",
+    "threshold": 1
+  },
+  "Check Box38": {
+    "source": "spellSlots.2.expended",
+    "type": "checkbox",
+    "threshold": 2
+  },
+  "Check Box43": {
+    "source": "spellSlots.2.expended",
+    "type": "checkbox",
+    "threshold": 3
+  },
+  "Check Box47": {
+    "source": "spellSlots.3.expended",
+    "type": "checkbox",
+    "threshold": 1
+  },
+  "Check Box44": {
+    "source": "spellSlots.3.expended",
+    "type": "checkbox",
+    "threshold": 2
+  },
+  "Check Box41": {
+    "source": "spellSlots.3.expended",
+    "type": "checkbox",
+    "threshold": 3
+  },
+  "Check Box51": {
+    "source": "spellSlots.6.expended",
+    "type": "checkbox",
+    "threshold": 1
+  },
+  "Check Box54": {
+    "source": "spellSlots.6.expended",
+    "type": "checkbox",
+    "threshold": 2
+  },
+  "Check Box57": {
+    "source": "spellSlots.9.expended",
+    "type": "checkbox",
+    "threshold": 1
+  },
+  "CLASS FEATURES 2": {
+    "source": "classFeaturesPart2",
+    "transform": "lines",
+    "autoSize": true
+  },
+  "_portrait": {
+    "page": 2,
+    "rect": [
+      410.9,
+      470.8,
+      589.0,
+      636.6
+    ]
+  }
+}

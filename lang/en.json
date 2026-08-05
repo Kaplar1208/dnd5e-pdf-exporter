@@ -1,0 +1,10 @@
+{
+  "PDFEXPORT.ButtonLabel": "Export PDF",
+  "PDFEXPORT.DialogTitle": "Export Character Sheet",
+  "PDFEXPORT.LanguageField": "Sheet language",
+  "PDFEXPORT.ExportButton": "Export",
+  "PDFEXPORT.CancelButton": "Cancel",
+  "PDFEXPORT.NoTemplate": "No PDF template found for language '{lang}'. Add one under templates/{lang}/sheet.pdf.",
+  "PDFEXPORT.Success": "Sheet exported successfully.",
+  "PDFEXPORT.Error": "Error exporting the sheet. Check the console (F12) for details."
+}

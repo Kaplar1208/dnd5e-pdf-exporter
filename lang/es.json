@@ -1,0 +1,10 @@
+{
+  "PDFEXPORT.ButtonLabel": "Exportar PDF",
+  "PDFEXPORT.DialogTitle": "Exportar hoja de personaje",
+  "PDFEXPORT.LanguageField": "Idioma de la hoja",
+  "PDFEXPORT.ExportButton": "Exportar",
+  "PDFEXPORT.CancelButton": "Cancelar",
+  "PDFEXPORT.NoTemplate": "No se encontró plantilla PDF para el idioma '{lang}'. Añade una en templates/{lang}/sheet.pdf.",
+  "PDFEXPORT.Success": "Hoja exportada correctamente.",
+  "PDFEXPORT.Error": "Error al exportar la hoja. Revisa la consola (F12) para más detalles."
+}
