@@ -50,4 +50,4 @@ The bundled fillable PDF is a fan-made recreation of the official 5e (2024) char
 
 ## Support
 
-Something not working? Open the browser console (F12) before exporting and check for lines starting with `dnd5e-pdf-exporter` — [open an issue](https://github.com/<your-username>/dnd5e-pdf-exporter/issues) with what you find there.
+Something not working? Open the browser console (F12) before exporting and check for lines starting with `dnd5e-pdf-exporter` — [open an issue](https://github.com/Kaplar1208/dnd5e-pdf-exporter/issues) with what you find there.
