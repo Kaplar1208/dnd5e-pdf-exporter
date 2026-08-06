@@ -15,7 +15,7 @@ Adds an **Export PDF** button to the character sheet header. Click it, pick a la
 
 1. In Foundry, go to **Add-on Modules → Install Module**.
 2. Paste this manifest URL:
-   `https://raw.githubusercontent.com/<your-username>/dnd5e-pdf-exporter/main/module.json`
+   `https://raw.githubusercontent.com/Kaplar1208/dnd5e-pdf-exporter/refs/heads/main/module.json`
 3. Enable it for your world.
 
 ## How to use it
@@ -36,7 +36,7 @@ The dnd5e system itself only stores item names (spells, feats, equipment...) in 
 
 The module reads whatever is currently shown on your screen, so it picks up the translation automatically. A small built-in glossary also fills in a handful of common terms as a backup, but it doesn't cover everything — the browser translation step above is what makes it work generally, for any character.
 
-**Note:** Personality traits, ideals, bonds, and flaws are free text you typed yourself — browser translators don't touch editable text fields. If you want those in Spanish (or any other language) in the PDF, type them in that language directly on the character sheet.
+**Note:** For personality traits, ideals, bonds, and flaws, I recommend opening the tab on Foundry and just **wait a bit** after you see them translated by your browser.
 
 ## Known limitations
 
