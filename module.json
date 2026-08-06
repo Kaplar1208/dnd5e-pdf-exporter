@@ -23,7 +23,7 @@
     { "lang": "es", "name": "Español", "path": "lang/es.json" }
   ],
   "authors": [{ "name": "Memo Castro" }],
-  "url": "",
-  "manifest": "",
-  "download": ""
+  "url": "https://github.com/Kaplar1208/dnd5e-pdf-exporter",
+  "manifest": "https://raw.githubusercontent.com/Kaplar1208/dnd5e-pdf-exporter/main/module.json",
+  "download": "https://github.com/Kaplar1208/dnd5e-pdf-exporter/releases/latest/download/dnd5e-pdf-exporter.zip"
 }
