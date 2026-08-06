@@ -1,7 +1,7 @@
 import { buildCanonicalData } from "./actor-mapper.js";
 import { fillPdf } from "./pdf-filler.js";
 
-const MODULE_ID = "dnd5e-pdf-exporter";
+const MODULE_ID = "dnd5e-pdf-multilang-exporter";
 
 /** Idiomas disponibles = subcarpetas de templates/ que tengan sheet.pdf + fieldmap.json */
 async function getAvailableLanguages() {
@@ -68,7 +68,7 @@ function scanNameOverridesFromSheet(sheetApp) {
     if (text) map.set(id, text);
   }
 
-  console.log(`dnd5e-pdf-exporter | nombres capturados del DOM de la hoja: ${map.size}`);
+  console.log(`dnd5e-pdf-multilang-exporter | nombres capturados del DOM de la hoja: ${map.size}`);
   return map;
 }
 
@@ -157,7 +157,7 @@ async function openExportDialog(actor, sheetApp) {
           try {
             await exportActorToPdf(actor, lang, sheetApp);
           } catch (err) {
-            console.error("dnd5e-pdf-exporter |", err);
+            console.error("dnd5e-pdf-multilang-exporter |", err);
             ui.notifications.error(game.i18n.localize("PDFEXPORT.Error"));
           }
         }
@@ -169,7 +169,7 @@ async function openExportDialog(actor, sheetApp) {
 }
 
 Hooks.once("init", () => {
-  console.log("dnd5e-pdf-exporter | init");
+  console.log("dnd5e-pdf-multilang-exporter | init");
 });
 
 /**

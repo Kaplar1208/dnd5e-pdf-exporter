@@ -29,7 +29,7 @@ async function _fetchJson(path) {
     if (!res.ok) return {}; // 404 es normal: no todos los paquetes traen ese idioma
     return await res.json();
   } catch (err) {
-    console.warn(`dnd5e-pdf-exporter | error de red al pedir ${path}`, err);
+    console.warn(`dnd5e-pdf-multilang-exporter | error de red al pedir ${path}`, err);
     return {};
   }
 }
@@ -75,7 +75,7 @@ export async function getTranslations(lang) {
   }
 
   // This module's own UI strings, so {{PDFEXPORT.*}} keys resolve too if ever needed.
-  sources.push(`modules/dnd5e-pdf-exporter/lang/${lang}.json`);
+  sources.push(`modules/dnd5e-pdf-multilang-exporter/lang/${lang}.json`);
 
   const jsons = await Promise.all(sources.map(_fetchJson));
   const merged = jsons.reduce((acc, j) => Object.assign(acc, _flatten(j)), {});
@@ -111,7 +111,7 @@ let _glossaryPromise = null;
 
 async function _loadGlossary() {
   if (!_glossaryPromise) {
-    _glossaryPromise = fetch(`modules/dnd5e-pdf-exporter/scripts/glossary.json`)
+    _glossaryPromise = fetch(`modules/dnd5e-pdf-multilang-exporter/scripts/glossary.json`)
       .then(res => res.ok ? res.json() : {})
       .catch(() => ({}));
   }
