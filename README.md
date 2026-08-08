@@ -44,6 +44,13 @@ The module reads whatever is currently shown on your screen, so it picks up the 
 - Some very version-specific fields (weapon attack/damage display, armor proficiency checkboxes) depend on your exact dnd5e version. If something exports blank, it's most likely a version-compatibility gap rather than lost data — nothing else is affected.
 - Currently ships with English and Spanish sheet templates. Adding another language means providing your own fillable PDF for it.
 
+## Changelog
+
+### v0.2.0
+
+- **Tidy 5e Sheets support**: the Export PDF button now appears on Tidy 5e Sheets (both the classic and the modern/ApplicationV2 versions), not just the native dnd5e character sheet.
+- **Clearer compatibility info**: this README and `module.json` now distinguish what's actually verified (Foundry 13.351 + dnd5e 5.3.3) from what should also work but hasn't been personally tested (Foundry 12+ / dnd5e 3.0+).
+
 ## Credit
 
 The bundled fillable PDF is a fan-made recreation of the official 5e (2024) character sheet and is not created or endorsed by Wizards of the Coast. TM & © Wizards of the Coast LLC.
