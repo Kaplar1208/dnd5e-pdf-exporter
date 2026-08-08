@@ -2,7 +2,7 @@
   "id": "dnd5e-pdf-multilang-exporter",
   "title": "5e PDF Character Sheet Exporter (Multi-Lingual)",
   "description": "Export character sheets to official WoTC fillable pdf, multilingual (using google browser translate).",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "compatibility": {
     "minimum": "12",
     "verified": "13.351"

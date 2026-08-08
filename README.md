@@ -46,6 +46,10 @@ The module reads whatever is currently shown on your screen, so it picks up the 
 
 ## Changelog
 
+### v0.2.1
+
+- Fixed hardcoded Spanish labels ("Rasgos", "Ideales", "Vínculos", "Defectos", "Sentidos", "Resistencias", "Inmunidades", "Vulnerabilidades") showing up even when exporting in English. They now follow the export language like everything else.
+
 ### v0.2.0
 
 - **Tidy 5e Sheets support**: the Export PDF button now appears on Tidy 5e Sheets (both the classic and the modern/ApplicationV2 versions), not just the native dnd5e character sheet.
