@@ -162,11 +162,11 @@ export async function buildCanonicalData(actor, lang, domNames = new Map(), bioO
 
   const speciesTraitsLines = [
     ...raceFeatures,
-    senseEntries.length ? `Sentidos: ${senseEntries.join(", ")}` : null,
-    drList.length ? `Resistencias: ${drList.join(", ")}` : null,
-    diList.length ? `Inmunidades (daño): ${diList.join(", ")}` : null,
-    dvList.length ? `Vulnerabilidades: ${dvList.join(", ")}` : null,
-    ciList.length ? `Inmunidades (condición): ${ciList.join(", ")}` : null
+    senseEntries.length ? `${t("PDFEXPORT.Senses")}: ${senseEntries.join(", ")}` : null,
+    drList.length ? `${t("PDFEXPORT.Resistances")}: ${drList.join(", ")}` : null,
+    diList.length ? `${t("PDFEXPORT.DamageImmunities")}: ${diList.join(", ")}` : null,
+    dvList.length ? `${t("PDFEXPORT.Vulnerabilities")}: ${dvList.join(", ")}` : null,
+    ciList.length ? `${t("PDFEXPORT.ConditionImmunities")}: ${ciList.join(", ")}` : null
   ].filter(Boolean);
 
   // El texto de especie de dnd5e (descripción genérica) suele incluir
@@ -389,10 +389,10 @@ export async function buildCanonicalData(actor, lang, domNames = new Map(), bioO
       // clásica), así que se combinan aquí con mini-encabezados.
       get combinedText() {
         const parts = [];
-        if (this.personalityTraits) parts.push(`Rasgos: ${this.personalityTraits}`);
-        if (this.ideals) parts.push(`Ideales: ${this.ideals}`);
-        if (this.bonds) parts.push(`Vínculos: ${this.bonds}`);
-        if (this.flaws) parts.push(`Defectos: ${this.flaws}`);
+        if (this.personalityTraits) parts.push(`${t("PDFEXPORT.Traits")}: ${this.personalityTraits}`);
+        if (this.ideals) parts.push(`${t("PDFEXPORT.Ideals")}: ${this.ideals}`);
+        if (this.bonds) parts.push(`${t("PDFEXPORT.Bonds")}: ${this.bonds}`);
+        if (this.flaws) parts.push(`${t("PDFEXPORT.Flaws")}: ${this.flaws}`);
         return parts.join("\n");
       }
     }

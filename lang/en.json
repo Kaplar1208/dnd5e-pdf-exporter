@@ -6,5 +6,14 @@
   "PDFEXPORT.CancelButton": "Cancel",
   "PDFEXPORT.NoTemplate": "No PDF template found for language '{lang}'. Add one under templates/{lang}/sheet.pdf.",
   "PDFEXPORT.Success": "Sheet exported successfully.",
-  "PDFEXPORT.Error": "Error exporting the sheet. Check the console (F12) for details."
+  "PDFEXPORT.Error": "Error exporting the sheet. Check the console (F12) for details.",
+  "PDFEXPORT.Traits": "Traits",
+  "PDFEXPORT.Ideals": "Ideals",
+  "PDFEXPORT.Bonds": "Bonds",
+  "PDFEXPORT.Flaws": "Flaws",
+  "PDFEXPORT.Senses": "Senses",
+  "PDFEXPORT.Resistances": "Resistances",
+  "PDFEXPORT.DamageImmunities": "Damage Immunities",
+  "PDFEXPORT.Vulnerabilities": "Vulnerabilities",
+  "PDFEXPORT.ConditionImmunities": "Condition Immunities"
 }
