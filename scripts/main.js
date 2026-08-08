@@ -182,7 +182,13 @@ Hooks.once("init", () => {
  * `game.actors.getName("Bane").sheet.constructor.name` en consola), añade
  * ese nombre al array SHEET_HOOKS de abajo.
  */
-const SHEET_HOOKS = ["renderCharacterActorSheet", "renderActorSheet5eCharacter", "renderActorSheet5eCharacter2"];
+const SHEET_HOOKS = [
+  "renderCharacterActorSheet",
+  "renderActorSheet5eCharacter",
+  "renderActorSheet5eCharacter2",
+  "renderActorSheetV2",            // dnd5e's generic ApplicationV2 hook; also fires for modern Tidy 5e Sheets
+  "tidy5e-sheet.renderActorSheet"  // Tidy 5e Sheets, classic (ApplicationV1) sheet
+];
 
 function injectHeaderButton(app, htmlOrRoot) {
   const root = htmlOrRoot instanceof HTMLElement ? htmlOrRoot
@@ -210,7 +216,14 @@ function injectHeaderButton(app, htmlOrRoot) {
 }
 
 for (const hookName of SHEET_HOOKS) {
-  Hooks.on(hookName, (app, html) => injectHeaderButton(app, html));
+  // renderActorSheetV2 and Tidy's own hook fire for every actor type, not
+  // just characters, so filter here (the character-specific hooks above
+  // don't need it, but the check is harmless for them too).
+  Hooks.on(hookName, (app, html) => {
+    const actor = app.actor ?? app.document;
+    if (actor?.type !== "character") return;
+    injectHeaderButton(app, html);
+  });
 }
 
 // Compatibilidad con hojas del framework viejo (Application v1), por si tu
