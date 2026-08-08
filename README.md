@@ -8,8 +8,10 @@ Adds an **Export PDF** button to the character sheet header. Click it, pick a la
 
 ## Requirements
 
-- Foundry VTT v12+
-- The **dnd5e** system (v3.0+)
+- **Verified:** Foundry VTT 13.351 + dnd5e 5.3.3 — this is the exact combo I actually test against before every release.
+- **Should also work:** Foundry v12+ with dnd5e v3.0+. The code has fallbacks for older sheet APIs (both the new ApplicationV2 sheet and the classic ones) and for data-model differences across dnd5e versions, but I haven't personally verified every combination in that range.
+
+If you run it on a different version and something breaks, please [open an issue](https://github.com/Kaplar1208/dnd5e-pdf-exporter/issues) with your exact Foundry and dnd5e version numbers — that's the fastest way to get it fixed and to actually confirm what's supported.
 
 ## Installation
 

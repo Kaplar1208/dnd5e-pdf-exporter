@@ -5,11 +5,11 @@
   "version": "0.1.0",
   "compatibility": {
     "minimum": "12",
-    "verified": "13"
+    "verified": "13.351"
   },
   "relationships": {
     "systems": [
-      { "id": "dnd5e", "type": "system", "compatibility": { "minimum": "3.0", "verified": "5.1" } }
+      { "id": "dnd5e", "type": "system", "compatibility": { "minimum": "3.0", "verified": "5.3.3" } }
     ]
   },
   "scripts": [
