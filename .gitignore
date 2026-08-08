@@ -2,3 +2,5 @@ node_modules/
 package-lock.json
 *.fieldmap.skeleton.json
 *.zip
+.gitignore
+.claude
