@@ -1,20 +1,16 @@
 name: Release
-
 on:
   push:
     tags:
       - "v*.*.*"
-
 permissions:
   contents: write
-
 jobs:
   release:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Verify tag matches module.json version
         run: |
           TAG_VERSION="${GITHUB_REF_NAME#v}"
@@ -23,7 +19,9 @@ jobs:
             echo "Tag version ($TAG_VERSION) does not match module.json version ($MODULE_VERSION)"
             exit 1
           fi
-
+      - name: Substitute download URL with this release's tag
+        run: |
+          sed -i "s|VERSION_TAG|${GITHUB_REF_NAME}|g" module.json
       - name: Build module zip
         run: |
           zip -r dnd5e-pdf-multilang-exporter.zip \
@@ -32,7 +30,6 @@ jobs:
             scripts \
             templates \
             tools
-
       - name: Create GitHub release
         uses: softprops/action-gh-release@v2
         with:
