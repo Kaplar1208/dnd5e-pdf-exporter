@@ -2,14 +2,14 @@
   "id": "dnd5e-pdf-multilang-exporter",
   "title": "5e PDF Character Sheet Exporter (Multi-Lingual)",
   "description": "Export character sheets to official WoTC fillable pdf, multilingual (using google browser translate).",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "compatibility": {
-    "minimum": "12",
+    "minimum": "13",
     "verified": "13.351"
   },
   "relationships": {
     "systems": [
-      { "id": "dnd5e", "type": "system", "compatibility": { "minimum": "3.0", "verified": "5.3.3" } }
+      { "id": "dnd5e", "type": "system", "compatibility": { "minimum": "5.0", "verified": "5.3.3" } }
     ]
   },
   "scripts": [
@@ -22,7 +22,7 @@
     { "lang": "en", "name": "English", "path": "lang/en.json" },
     { "lang": "es", "name": "Español", "path": "lang/es.json" }
   ],
-  "authors": [{ "name": "Memo Castro" }],
+  "authors": [{ "name": "Kaplar" }],
   "url": "https://github.com/Kaplar1208/dnd5e-pdf-exporter",
   "manifest": "https://raw.githubusercontent.com/Kaplar1208/dnd5e-pdf-exporter/main/module.json",
   "download": "https://github.com/Kaplar1208/dnd5e-pdf-exporter/releases/latest/download/dnd5e-pdf-multilang-exporter.zip"
