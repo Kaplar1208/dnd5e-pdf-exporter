@@ -1,15 +1,25 @@
 # D&D 5e PDF Character Sheet Exporter
 
+![Latest Release Download Count](https://img.shields.io/github/downloads/Kaplar1208/dnd5e-pdf-exporter/total?style=for-the-badge) ![GitHub issues](https://img.shields.io/github/issues/Kaplar1208/dnd5e-pdf-exporter?style=for-the-badge) ![GitHub release](https://img.shields.io/github/v/release/Kaplar1208/dnd5e-pdf-exporter?style=for-the-badge) ![Foundry Core Compatible Version](https://img.shields.io/badge/dynamic/json.svg?url=https%3A%2F%2Fgithub.com%2FKaplar1208%2Fdnd5e-pdf-exporter%2Freleases%2Flatest%2Fdownload%2Fmodule.json&label=Foundry%20Version&query=$.compatibility.verified&colorB=orange&style=for-the-badge)
+
 Export your Foundry VTT character sheet to a fillable PDF — in **any language**, not just English.
-
-## What it does
-
-Adds an **Export PDF** button to the character sheet header. Click it, pick a language, and it downloads a filled-in PDF version of your character — ability scores, skills, spells, feats, equipment, all of it.
 
 ## Requirements
 
 - **Verified:** Foundry VTT 13.351 + dnd5e 5.3.3
 - **Should also work:** Foundry v12+ with dnd5e v3.0+ (not personally verified)
+
+## What it does
+
+Adds an **Export PDF** button to the character sheet header. Click it, pick a language, and it downloads a filled-in PDF version of your character — ability scores, skills, spells, feats, equipment, all of it.
+
+![Export PDF button in the character sheet header](docs/images/export-button.png)
+
+### Tidy 5e Sheets support
+
+The button also shows up on [Tidy 5e Sheets](https://foundryvtt.com/packages/tidy5e-sheet) (both the classic and the modern/ApplicationV2 versions) — not just the native dnd5e character sheet.
+
+![Export PDF button working on a Tidy 5e Sheet](docs/images/tidy5e-button.png)
 
 ## Installation
 
@@ -23,7 +33,12 @@ Adds an **Export PDF** button to the character sheet header. Click it, pick a la
 1. Open a character sheet.
 2. Click the **PDF icon** in the window's title bar.
 3. Choose a language (English or Spanish, for now).
+
+   ![Language selection dialog](docs/images/language-dialog.png)
+
 4. The PDF downloads automatically.
+
+   ![Sample of a filled-in exported PDF](docs/images/exported-pdf-sample.png)
 
 ## Getting non-English names to show up correctly
 
@@ -31,10 +46,15 @@ The dnd5e system itself only stores item names (spells, feats, equipment...) in 
 
 1. Open the character sheet.
 2. Turn on your browser's page-translation feature (e.g. Google Chrome's built-in "Translate this page") and let it fully finish translating.
+
+   ![Chrome's "Translate this page" option](docs/images/browser-translate-option.png)
+
 3. **Wait a few seconds** for the translation to settle before exporting — if you export too quickly, some names may still be in English.
 4. Click **Export PDF**.
 
 The module reads whatever is currently shown on your screen, so it picks up the translation automatically. A small built-in glossary also fills in a handful of common terms as a backup, but it doesn't cover everything — the browser translation step above is what makes it work generally, for any character.
+
+![Character sheet before and after browser translation](docs/images/translation-before-after.png)
 
 **Note:** For personality traits, ideals, bonds, and flaws, I recommend opening the tab on Foundry and just **wait a bit** after you see them translated by your browser.
 
