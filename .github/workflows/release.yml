@@ -1,40 +1,67 @@
 name: Release
+# Se dispara cuando module.json cambia en un push a main, o a mano desde
+# la pestaña "Actions" por si hay que reintentar algo.
 on:
   push:
-    tags:
-      - "v*.*.*"
+    branches: [main]
+    paths:
+      - module.json
+  workflow_dispatch:
+
 permissions:
   contents: write
+
 jobs:
   release:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Verify tag matches module.json version
+
+      - name: Leer versión desde module.json
+        id: version
         run: |
-          TAG_VERSION="${GITHUB_REF_NAME#v}"
-          MODULE_VERSION=$(node -p "require('./module.json').version")
-          if [ "$TAG_VERSION" != "$MODULE_VERSION" ]; then
-            echo "Tag version ($TAG_VERSION) does not match module.json version ($MODULE_VERSION)"
-            exit 1
+          VERSION=$(node -p "require('./module.json').version")
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "tag=v$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Revisar si ya existe un Release para esta versión
+        id: check_release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if gh release view "${{ steps.version.outputs.tag }}" --repo "${{ github.repository }}" >/dev/null 2>&1; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
           fi
-      - name: Substitute download URL with this release's tag
-        run: |
-          sed -i "s|VERSION_TAG|${GITHUB_REF_NAME}|g" module.json
+
+      # ---- ÚNICA PARTE A PERSONALIZAR POR MÓDULO ----
+      # Cambia el nombre del zip y la lista de carpetas/archivos incluidos
       - name: Build module zip
+        if: steps.check_release.outputs.exists == 'false'
         run: |
-          zip -r dnd5e-pdf-multilang-exporter.zip \
-            module.json \
-            lang \
-            scripts \
-            templates \
-            tools
-      - name: Create GitHub release
+          mkdir -p build
+          cp module.json build/module.json
+          sed -i "s|releases/latest/download|releases/download/${{ steps.version.outputs.tag }}|g" build/module.json
+          cp -r lang scripts templates tools build/
+          cd build
+          zip -r ../dnd5e-pdf-multilang-exporter.zip .
+      # -------------------------------------------------
+
+      - name: Crear tag
+        if: steps.check_release.outputs.exists == 'false'
+        run: |
+          git tag "${{ steps.version.outputs.tag }}"
+          git push origin "${{ steps.version.outputs.tag }}"
+
+      - name: Crear GitHub Release (draft)
+        if: steps.check_release.outputs.exists == 'false'
         uses: softprops/action-gh-release@v2
         with:
+          tag_name: ${{ steps.version.outputs.tag }}
           draft: true
+          generate_release_notes: true
           files: |-
             dnd5e-pdf-multilang-exporter.zip
-            module.json
-          generate_release_notes: true
+            build/module.json
