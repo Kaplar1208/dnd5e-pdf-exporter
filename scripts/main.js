@@ -133,7 +133,7 @@ async function exportActorToPdf(actor, lang, sheetApp) {
 
   const blob = new Blob([outBytes], { type: "application/pdf" });
   const filename = `${actor.name.replace(/\s+/g, "_")}_${lang}.pdf`;
-  saveDataToFile(blob, "application/pdf", filename); // helper global de Foundry
+  (foundry.utils.saveDataToFile ?? globalThis.saveDataToFile)(blob, "application/pdf", filename);
   ui.notifications.info(game.i18n.localize("PDFEXPORT.Success"));
 }
 
@@ -141,19 +141,22 @@ async function openExportDialog(actor, sheetApp) {
   const languages = await getAvailableLanguages();
   const options = languages.map(l => `<option value="${l}">${l.toUpperCase()}</option>`).join("");
 
-  new Dialog({
-    title: game.i18n.localize("PDFEXPORT.DialogTitle"),
+  new foundry.applications.api.DialogV2({
+    window: { title: game.i18n.localize("PDFEXPORT.DialogTitle") },
     content: `
       <div class="form-group">
         <label>${game.i18n.localize("PDFEXPORT.LanguageField")}</label>
-        <select id="pdfexport-lang">${options}</select>
+        <select id="pdfexport-lang" name="pdfexport-lang">${options}</select>
       </div>
     `,
-    buttons: {
-      export: {
+    buttons: [
+      {
+        action: "export",
         label: game.i18n.localize("PDFEXPORT.ExportButton"),
-        callback: async html => {
-          const lang = html.find("#pdfexport-lang").val();
+        default: true,
+        callback: async (event, button, dialog) => {
+          const lang = button.form?.elements["pdfexport-lang"]?.value
+            ?? dialog.element?.querySelector("#pdfexport-lang")?.value;
           try {
             await exportActorToPdf(actor, lang, sheetApp);
           } catch (err) {
@@ -162,10 +165,12 @@ async function openExportDialog(actor, sheetApp) {
           }
         }
       },
-      cancel: { label: game.i18n.localize("PDFEXPORT.CancelButton") }
-    },
-    default: "export"
-  }).render(true);
+      {
+        action: "cancel",
+        label: game.i18n.localize("PDFEXPORT.CancelButton")
+      }
+    ]
+  }).render({ force: true });
 }
 
 Hooks.once("init", () => {

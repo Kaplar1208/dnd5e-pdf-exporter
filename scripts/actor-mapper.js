@@ -259,14 +259,16 @@ export async function buildCanonicalData(actor, lang, domNames = new Map(), bioO
   ];
 
   // Lanzamiento de conjuros: dnd5e guarda esto por clase de conjurador
-  // (actor.system.attributes.spellcasting = clave de habilidad, ej. "cha").
+  // (actor.system.attributes.spellcasting = clave de habilidad, ej. "cha",
+  // y en dnd5e 5+/6+ también agrupa valores derivados bajo attributes.spell).
   const spellAbilityKey = sys.attributes.spellcasting;
   const spellAbility = spellAbilityKey ? sys.abilities[spellAbilityKey] : null;
   const spellcasting = {
     abilityLabel: spellAbilityKey ? t(CONFIG.DND5E.abilities[spellAbilityKey]?.label) : "",
-    mod: spellAbility?.mod ?? 0,
-    saveDC: sys.attributes.spelldc ?? 0,
-    attackBonus: spellAbility ? spellAbility.mod + (sys.attributes.prof ?? 0) : 0,
+    mod: sys.attributes.spell?.mod ?? sys.attributes.spellmod ?? spellAbility?.mod ?? 0,
+    saveDC: sys.attributes.spell?.dc ?? sys.attributes.spelldc ?? 0,
+    attackBonus: sys.attributes.spell?.attack
+      ?? (spellAbility ? spellAbility.mod + (sys.attributes.prof ?? 0) : 0),
     get abilityLabelWithPactNote() {
       return pactNote ? `${this.abilityLabel}\n${pactNote}` : this.abilityLabel;
     }
